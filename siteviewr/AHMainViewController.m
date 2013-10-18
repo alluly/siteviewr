@@ -9,7 +9,7 @@
 #import "AHMainViewController.h"
 
 @interface AHMainViewController ()
-
+@property(nonatomic, strong) IBOutlet UIWebView *web; 
 @end
 
 @implementation AHMainViewController
