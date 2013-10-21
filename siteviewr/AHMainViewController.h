@@ -8,6 +8,11 @@
 
 #import "AHFlipsideViewController.h"
 
-@interface AHMainViewController : UIViewController <AHFlipsideViewControllerDelegate>
+@class DBRestClient;
 
+@interface AHMainViewController : UIViewController <AHFlipsideViewControllerDelegate>
+{
+    DBRestClient *restClient;
+    NSString *hash;
+}
 @end

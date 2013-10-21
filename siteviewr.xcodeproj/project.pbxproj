@@ -22,6 +22,7 @@
 		F38269E2180CE3F000706F29 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F38269C1180CE3F000706F29 /* UIKit.framework */; };
 		F38269EA180CE3F000706F29 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F38269E8180CE3F000706F29 /* InfoPlist.strings */; };
 		F38269EC180CE3F000706F29 /* siteviewrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F38269EB180CE3F000706F29 /* siteviewrTests.m */; };
+		F38269F8180CE65D00706F29 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F38269F7180CE65D00706F29 /* DropboxSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		F38269E7180CE3F000706F29 /* siteviewrTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "siteviewrTests-Info.plist"; sourceTree = "<group>"; };
 		F38269E9180CE3F000706F29 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F38269EB180CE3F000706F29 /* siteviewrTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = siteviewrTests.m; sourceTree = "<group>"; };
+		F38269F7180CE65D00706F29 /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DropboxSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F38269F8180CE65D00706F29 /* DropboxSDK.framework in Frameworks */,
 				F38269C0180CE3F000706F29 /* CoreGraphics.framework in Frameworks */,
 				F38269C2180CE3F000706F29 /* UIKit.framework in Frameworks */,
 				F38269BE180CE3F000706F29 /* Foundation.framework in Frameworks */,
@@ -104,6 +107,7 @@
 		F38269BC180CE3F000706F29 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F38269F7180CE65D00706F29 /* DropboxSDK.framework */,
 				F38269BD180CE3F000706F29 /* Foundation.framework */,
 				F38269BF180CE3F000706F29 /* CoreGraphics.framework */,
 				F38269C1180CE3F000706F29 /* UIKit.framework */,
@@ -385,6 +389,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/ahasan/Documents/Development/Creative/siteviewr,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "siteviewr/siteviewr-Prefix.pch";
 				INFOPLIST_FILE = "siteviewr/siteviewr-Info.plist";
@@ -398,6 +406,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/ahasan/Documents/Development/Creative/siteviewr,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "siteviewr/siteviewr-Prefix.pch";
 				INFOPLIST_FILE = "siteviewr/siteviewr-Info.plist";
@@ -467,6 +479,7 @@
 				F38269F1180CE3F000706F29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F38269F2180CE3F000706F29 /* Build configuration list for PBXNativeTarget "siteviewrTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +488,7 @@
 				F38269F4180CE3F000706F29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
