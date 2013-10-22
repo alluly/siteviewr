@@ -1,6 +1,6 @@
 #siteviewr
     
-siteviewr uses the [Dropbox Core API](https://www.dropbox.com/developers/core) to pull a website from your Dropbox account and display it in the app. In the normal Dropbox app html and other files are not parsed as they would in a browser. This shows your website as it would look on the iPhone. Rather than making a subdomain [test.yourwebsite.com](test.yourwebsite.com) or [yourwebsite.com/test](yourwebsite.com/test) 
+siteviewr uses the [Dropbox Core API](https://www.dropbox.com/developers/core) to pull a website from your Dropbox account and display it in the app. In the normal Dropbox app html and other files are not parsed as they would in a browser. This shows your website as it would look on the iPhone. Rather than making a subdomain [test.yourwebsite.com](test.yourwebsite.com) or [yourwebsite.com/test](yourwebsite.com/test), just drop your website's resources into a folder called siteviewr.
 
 I basically made it because it became annoying to test whether or not the site I was building looked good on retina devices. 
 
@@ -22,9 +22,11 @@ I built this because I really wanted to test my websites on the iPhone without t
 
 ###Limitations
 
-The app obviously does not support CGI scripts. 
+The app does not support CGI scripts. 
 
 Ideally it would be nice for the user to select from a number of websites he/she may have uploaded, not just the one website in the folder. 
+
+The app automatically chooses index.html for the initial page. Ideally the user should be able to test with any html file name by choosing the file.  
 
 ###Future Improvements
 
@@ -33,6 +35,8 @@ The user should definitely be able to choose any folder from his/her Dropbox.
 Instead of loading all the resources again each time the resources should be cached. Only new resources should be changed. 
 
 Instead of reloading the webview each time a resource is added the webview should load at the end when all resources have been added.
+
+Instead of having the user create a new folder called siteviewr, a folder called siteviewr should automatically be created once the user links his/her account with this.
 
 ###Other Info
 
