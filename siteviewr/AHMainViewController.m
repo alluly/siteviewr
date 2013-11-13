@@ -26,6 +26,7 @@
     [self createDirectory:@"/website" atFilePath:nil];
     
     if ([[DBSession sharedSession] isLinked]) {
+        [[self restClient] createFolder:@"siteviewr"];
         [[self restClient] loadMetadata:@"/siteviewr"];
     } else {
         [[DBSession sharedSession] linkFromController:self];
@@ -56,15 +57,19 @@
 }
 
 - (void)restClient:(DBRestClient *)client loadedMetadata:(DBMetadata *)metadata {
+    
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0]; // Get documents folder
     NSString *dataPath = [documentsDirectory stringByAppendingPathComponent:@"/website"];
+    
     for (DBMetadata *file in metadata.contents) {
+        
         NSArray *components = [file.path pathComponents];
         NSString *loadingComponent = file.path;
         _loadingLabel.text = [NSString stringWithFormat:@"Loading %@",[loadingComponent lastPathComponent]];
         [_loadingWheel startAnimating];
         NSString *path = @"";
+        
         for (int i = 2; i < components.count; i++) {
             NSString *paths = [components objectAtIndex:i];
             path = [path stringByAppendingPathComponent:[NSString stringWithFormat:@"/%@",paths]];
@@ -97,13 +102,16 @@
     if (client.requestCount < 3) {
         _loadingWheel.hidden = YES;
         _loadingLabel.text = @"";
+        _loadingLabel.textAlignment = NSTextAlignmentCenter;
         [_loadingWheel stopAnimating];
         [UIView animateWithDuration:1.f animations:^{
             CGRect screenRect = [UIScreen mainScreen].bounds;
-            
-            _web.frame = CGRectMake(0, [UIApplication sharedApplication].statusBarFrame.size.height, screenRect.size.width, screenRect.size.height);
+            _loadingLabel.frame = CGRectMake(0, [UIApplication sharedApplication].statusBarFrame.size.height, 320, 20);
+
+            _web.frame = CGRectMake(0, [UIApplication sharedApplication].statusBarFrame.size.height + 25, screenRect.size.width, screenRect.size.height);
         }];
         [_web reload];
+        _loadingLabel.text = [_web stringByEvaluatingJavaScriptFromString:@"document.title"];
     }
     NSLog(@"Loaded file at path %@",localPath);
 }

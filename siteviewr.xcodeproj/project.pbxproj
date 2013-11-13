@@ -23,6 +23,7 @@
 		F38269EA180CE3F000706F29 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F38269E8180CE3F000706F29 /* InfoPlist.strings */; };
 		F38269EC180CE3F000706F29 /* siteviewrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F38269EB180CE3F000706F29 /* siteviewrTests.m */; };
 		F38269F8180CE65D00706F29 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F38269F7180CE65D00706F29 /* DropboxSDK.framework */; };
+		F3C62763183195F30007EBDD /* AHSlideShow.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C62762183195F30007EBDD /* AHSlideShow.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		F38269E9180CE3F000706F29 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F38269EB180CE3F000706F29 /* siteviewrTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = siteviewrTests.m; sourceTree = "<group>"; };
 		F38269F7180CE65D00706F29 /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DropboxSDK.framework; sourceTree = "<group>"; };
+		F3C62761183195F30007EBDD /* AHSlideShow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHSlideShow.h; sourceTree = "<group>"; };
+		F3C62762183195F30007EBDD /* AHSlideShow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHSlideShow.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +129,8 @@
 				F38269D3180CE3F000706F29 /* AHMainViewController.m */,
 				F38269D5180CE3F000706F29 /* AHFlipsideViewController.h */,
 				F38269D6180CE3F000706F29 /* AHFlipsideViewController.m */,
+				F3C62761183195F30007EBDD /* AHSlideShow.h */,
+				F3C62762183195F30007EBDD /* AHSlideShow.m */,
 				F38269D8180CE3F000706F29 /* Images.xcassets */,
 				F38269C4180CE3F000706F29 /* Supporting Files */,
 			);
@@ -263,6 +268,7 @@
 				F38269D7180CE3F000706F29 /* AHFlipsideViewController.m in Sources */,
 				F38269CA180CE3F000706F29 /* main.m in Sources */,
 				F38269CE180CE3F000706F29 /* AHAppDelegate.m in Sources */,
+				F3C62763183195F30007EBDD /* AHSlideShow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
