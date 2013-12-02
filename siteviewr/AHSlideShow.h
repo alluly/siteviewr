@@ -10,5 +10,5 @@
 
 @interface AHSlideShow : UIView
 @property(nonatomic, strong) UIScrollView *scroll;
-
+- (id)initWithFrame:(CGRect)frame withPages:(NSUInteger)pages images:(NSArray *)imageArray blurbs:(NSArray *)blurbArray;
 @end

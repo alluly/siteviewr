@@ -15,20 +15,20 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        _scroll = [[UIScrollView alloc] initWithFrame:CGRectMake(frame.origin.x, frame.origin.y, frame.size.width * pages, frame.size.height)];
+        _scroll = [[UIScrollView alloc] initWithFrame:CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, frame.size.height)];
         _scroll.pagingEnabled = YES;
-        
-        for (int i = 0; i<=pages; i++) {
+        _scroll.contentSize = CGSizeMake(frame.size.width * pages, frame.size.height);
+        for (int i = 0; i<pages; i++) {
             UITextView *blurb = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
             blurb.text = [blurbArray objectAtIndex:i];
             blurb.userInteractionEnabled = NO; 
             blurb.tag = i;
-            [self addSubview:blurb];
+            [_scroll addSubview:blurb];
             
-            UIImageView *background = [[UIImageView alloc] initWithFrame:self.bounds];
+            UIImageView *background = [[UIImageView alloc] initWithFrame:CGRectMake(frame.size.width*i, 0, frame.size.width, frame.size.height)];
             background.image = [imageArray objectAtIndex:i];
             background.tag = i;
-            [self addSubview:background];
+            [_scroll addSubview:background];
             
         }
         

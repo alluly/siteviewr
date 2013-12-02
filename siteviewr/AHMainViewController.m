@@ -7,6 +7,7 @@
 //
 
 #import "AHMainViewController.h"
+#import "AHSlideShow.h"
 #import <DropboxSDK/DropboxSDK.h>
 #import <stdlib.h>
 
@@ -29,7 +30,10 @@
         [[self restClient] createFolder:@"siteviewr"];
         [[self restClient] loadMetadata:@"/siteviewr"];
     } else {
-        [[DBSession sharedSession] linkFromController:self];
+        AHSlideShow *intro = [[AHSlideShow alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) withPages:3 images:@[[UIImage imageNamed:@"1.png"],[UIImage imageNamed:@"2.png"],[UIImage imageNamed:@"3.png"]] blurbs:@[@"Connect with Dropbox", @"Drop your website", @"Test it natively"]];
+        
+        [self.view addSubview:intro];
+        //[[DBSession sharedSession] linkFromController:self];
     }
 	// Do any additional setup after loading the view, typically from a nib.
 }

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F342CA80184CE5B900C2C3C9 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = F342CA7A184CE5B900C2C3C9 /* 1.png */; };
+		F342CA81184CE5B900C2C3C9 /* 1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F342CA7B184CE5B900C2C3C9 /* 1@2x.png */; };
+		F342CA82184CE5B900C2C3C9 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = F342CA7C184CE5B900C2C3C9 /* 2.png */; };
+		F342CA83184CE5B900C2C3C9 /* 2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F342CA7D184CE5B900C2C3C9 /* 2@2x.png */; };
+		F342CA84184CE5B900C2C3C9 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = F342CA7E184CE5B900C2C3C9 /* 3.png */; };
+		F342CA85184CE5B900C2C3C9 /* 3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F342CA7F184CE5B900C2C3C9 /* 3@2x.png */; };
 		F38269BE180CE3F000706F29 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F38269BD180CE3F000706F29 /* Foundation.framework */; };
 		F38269C0180CE3F000706F29 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F38269BF180CE3F000706F29 /* CoreGraphics.framework */; };
 		F38269C2180CE3F000706F29 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F38269C1180CE3F000706F29 /* UIKit.framework */; };
@@ -37,6 +43,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F342CA7A184CE5B900C2C3C9 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		F342CA7B184CE5B900C2C3C9 /* 1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1@2x.png"; sourceTree = "<group>"; };
+		F342CA7C184CE5B900C2C3C9 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		F342CA7D184CE5B900C2C3C9 /* 2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2@2x.png"; sourceTree = "<group>"; };
+		F342CA7E184CE5B900C2C3C9 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		F342CA7F184CE5B900C2C3C9 /* 3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3@2x.png"; sourceTree = "<group>"; };
 		F38269BA180CE3F000706F29 /* siteviewr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = siteviewr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F38269BD180CE3F000706F29 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F38269BF180CE3F000706F29 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -88,6 +100,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F342CA86184CE5C700C2C3C9 /* Slides */ = {
+			isa = PBXGroup;
+			children = (
+				F342CA7A184CE5B900C2C3C9 /* 1.png */,
+				F342CA7B184CE5B900C2C3C9 /* 1@2x.png */,
+				F342CA7C184CE5B900C2C3C9 /* 2.png */,
+				F342CA7D184CE5B900C2C3C9 /* 2@2x.png */,
+				F342CA7E184CE5B900C2C3C9 /* 3.png */,
+				F342CA7F184CE5B900C2C3C9 /* 3@2x.png */,
+			);
+			name = Slides;
+			sourceTree = "<group>";
+		};
 		F38269B1180CE3F000706F29 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +165,7 @@
 		F38269C4180CE3F000706F29 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F342CA86184CE5C700C2C3C9 /* Slides */,
 				F38269C5180CE3F000706F29 /* siteviewr-Info.plist */,
 				F38269C6180CE3F000706F29 /* InfoPlist.strings */,
 				F38269C9180CE3F000706F29 /* main.m */,
@@ -243,7 +269,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F342CA85184CE5B900C2C3C9 /* 3@2x.png in Resources */,
+				F342CA82184CE5B900C2C3C9 /* 2.png in Resources */,
 				F38269D9180CE3F000706F29 /* Images.xcassets in Resources */,
+				F342CA83184CE5B900C2C3C9 /* 2@2x.png in Resources */,
+				F342CA84184CE5B900C2C3C9 /* 3.png in Resources */,
+				F342CA80184CE5B900C2C3C9 /* 1.png in Resources */,
+				F342CA81184CE5B900C2C3C9 /* 1@2x.png in Resources */,
 				F38269C8180CE3F000706F29 /* InfoPlist.strings in Resources */,
 				F38269D1180CE3F000706F29 /* Main.storyboard in Resources */,
 			);
