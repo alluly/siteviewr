@@ -5,8 +5,9 @@
 //  Created by Ali Hasan on 11/11/13.
 //  Copyright (c) 2013 Ali Hasan. All rights reserved.
 //
-#define kMarginBottom 15
 #import "AHSlideShow.h"
+
+#define kMarginBottom 15
 
 @implementation AHSlideShow
 
@@ -16,6 +17,7 @@
     if (self) {
         // Initialization code
         _scroll = [[UIScrollView alloc] initWithFrame:CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, frame.size.height)];
+        _scroll.delegate = self;
         _scroll.pagingEnabled = YES;
         _scroll.contentSize = CGSizeMake(frame.size.width * pages, frame.size.height);
         for (int i = 0; i<pages; i++) {
@@ -34,15 +36,32 @@
             [_scroll addSubview:background];
             [_scroll addSubview:blurb];
 
-            
         }
         
+        _dismiss = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        _dismiss.hidden = YES;
+        _dismiss.frame = CGRectMake(100, 300, 120, 30);
+        [_dismiss setTitle:@"Dismiss" forState:UIControlStateNormal];
+        [_dismiss addTarget:self action:@selector(dismiss:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:_scroll];
+        [self addSubview:_dismiss];
     }
     
     return self;
 }
 
+-(void)dismiss:(id)sender
+{
+    [self removeFromSuperview];
+}
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if ((scrollView.contentOffset.x - scrollView.frame.size.width)/scrollView.frame.size.width == 1) {
+        //you're at the end, show the button
+        _dismiss.hidden = NO;
+    }
+}
 
 /*
 // Only override drawRect: if you perform custom drawing.
