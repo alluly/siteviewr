@@ -15,4 +15,5 @@
     DBRestClient *restClient;
     NSString *hash;
 }
+@property(nonatomic, strong) IBOutlet UIButton *refresh;
 @end

@@ -52,7 +52,7 @@
         //[[DBSession sharedSession] linkFromController:self];
     }
 }
--(void)refresh:(id)sender
+-(IBAction)refresh:(id)sender
 {
     [[self restClient] loadMetadata:@"/siteviewr"];
 }
