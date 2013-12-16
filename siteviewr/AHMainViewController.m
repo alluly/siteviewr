@@ -32,11 +32,29 @@
         [[self restClient] loadMetadata:@"/siteviewr"];
     } else {
         AHSlideShow *intro = [[AHSlideShow alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) withPages:3 images:@[[UIImage imageNamed:@"1.png"],[UIImage imageNamed:@"2.png"],[UIImage imageNamed:@"3.png"]] blurbs:@[@"Connect with Dropbox", @"Drop in your website", @"Test it natively"]];
-        
+        intro.delegate = self;
         [self.view addSubview:intro];
         //[[DBSession sharedSession] linkFromController:self];
     }
 	// Do any additional setup after loading the view, typically from a nib.
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    if ([[DBSession sharedSession] isLinked]) {
+        [[self restClient] createFolder:@"siteviewr"];
+        [[self restClient] loadMetadata:@"/siteviewr"];
+    } else {
+        AHSlideShow *intro = [[AHSlideShow alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) withPages:3 images:@[[UIImage imageNamed:@"1.png"],[UIImage imageNamed:@"2.png"],[UIImage imageNamed:@"3.png"]] blurbs:@[@"Connect with Dropbox", @"Drop in your website", @"Test it natively"]];
+        intro.delegate = self;
+        [self.view addSubview:intro];
+        //[[DBSession sharedSession] linkFromController:self];
+    }
+}
+-(void)refresh:(id)sender
+{
+    [[self restClient] loadMetadata:@"/siteviewr"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -170,6 +188,7 @@
 
 -(void)slideShowDidDismiss
 {
+    NSLog(@"slide show");
     [[DBSession sharedSession] linkFromController:self];
 }
 

@@ -29,6 +29,8 @@
 		F38269EA180CE3F000706F29 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F38269E8180CE3F000706F29 /* InfoPlist.strings */; };
 		F38269EC180CE3F000706F29 /* siteviewrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F38269EB180CE3F000706F29 /* siteviewrTests.m */; };
 		F38269F8180CE65D00706F29 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F38269F7180CE65D00706F29 /* DropboxSDK.framework */; };
+		F3B48E25185F7DF8002DFD20 /* Reset@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F3B48E24185F7DF8002DFD20 /* Reset@2x.png */; };
+		F3B48E27185F7E05002DFD20 /* Reset.png in Resources */ = {isa = PBXBuildFile; fileRef = F3B48E26185F7E05002DFD20 /* Reset.png */; };
 		F3C62763183195F30007EBDD /* AHSlideShow.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C62762183195F30007EBDD /* AHSlideShow.m */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +74,8 @@
 		F38269EB180CE3F000706F29 /* siteviewrTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = siteviewrTests.m; sourceTree = "<group>"; };
 		F38269F7180CE65D00706F29 /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DropboxSDK.framework; sourceTree = "<group>"; };
 		F3B48E23185F65F8002DFD20 /* AHSlideShowDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AHSlideShowDelegate.h; sourceTree = "<group>"; };
+		F3B48E24185F7DF8002DFD20 /* Reset@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Reset@2x.png"; sourceTree = "<group>"; };
+		F3B48E26185F7E05002DFD20 /* Reset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Reset.png; sourceTree = "<group>"; };
 		F3C62761183195F30007EBDD /* AHSlideShow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHSlideShow.h; sourceTree = "<group>"; };
 		F3C62762183195F30007EBDD /* AHSlideShow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHSlideShow.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -167,6 +171,8 @@
 		F38269C4180CE3F000706F29 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F3B48E24185F7DF8002DFD20 /* Reset@2x.png */,
+				F3B48E26185F7E05002DFD20 /* Reset.png */,
 				F342CA86184CE5C700C2C3C9 /* Slides */,
 				F38269C5180CE3F000706F29 /* siteviewr-Info.plist */,
 				F38269C6180CE3F000706F29 /* InfoPlist.strings */,
@@ -273,8 +279,10 @@
 			files = (
 				F342CA85184CE5B900C2C3C9 /* 3@2x.png in Resources */,
 				F342CA82184CE5B900C2C3C9 /* 2.png in Resources */,
+				F3B48E27185F7E05002DFD20 /* Reset.png in Resources */,
 				F38269D9180CE3F000706F29 /* Images.xcassets in Resources */,
 				F342CA83184CE5B900C2C3C9 /* 2@2x.png in Resources */,
+				F3B48E25185F7DF8002DFD20 /* Reset@2x.png in Resources */,
 				F342CA84184CE5B900C2C3C9 /* 3.png in Resources */,
 				F342CA80184CE5B900C2C3C9 /* 1.png in Resources */,
 				F342CA81184CE5B900C2C3C9 /* 1@2x.png in Resources */,
