@@ -71,6 +71,7 @@
 		F38269E9180CE3F000706F29 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F38269EB180CE3F000706F29 /* siteviewrTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = siteviewrTests.m; sourceTree = "<group>"; };
 		F38269F7180CE65D00706F29 /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DropboxSDK.framework; sourceTree = "<group>"; };
+		F3B48E23185F65F8002DFD20 /* AHSlideShowDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AHSlideShowDelegate.h; sourceTree = "<group>"; };
 		F3C62761183195F30007EBDD /* AHSlideShow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHSlideShow.h; sourceTree = "<group>"; };
 		F3C62762183195F30007EBDD /* AHSlideShow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHSlideShow.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,6 +155,7 @@
 				F38269D3180CE3F000706F29 /* AHMainViewController.m */,
 				F38269D5180CE3F000706F29 /* AHFlipsideViewController.h */,
 				F38269D6180CE3F000706F29 /* AHFlipsideViewController.m */,
+				F3B48E23185F65F8002DFD20 /* AHSlideShowDelegate.h */,
 				F3C62761183195F30007EBDD /* AHSlideShow.h */,
 				F3C62762183195F30007EBDD /* AHSlideShow.m */,
 				F38269D8180CE3F000706F29 /* Images.xcassets */,

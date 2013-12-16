@@ -53,6 +53,8 @@
 -(void)dismiss:(id)sender
 {
     [self removeFromSuperview];
+    
+    [self.delegate slideShowDidDismiss];
 }
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView

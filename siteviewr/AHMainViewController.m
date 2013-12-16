@@ -8,10 +8,11 @@
 
 #import "AHMainViewController.h"
 #import "AHSlideShow.h"
+#import "AHSlideShowDelegate.h"
 #import <DropboxSDK/DropboxSDK.h>
 #import <stdlib.h>
 
-@interface AHMainViewController () <DBRestClientDelegate>
+@interface AHMainViewController () <DBRestClientDelegate, AHSlideShowDelegate>
 @property (nonatomic, readonly) DBRestClient* restClient;
 @property(nonatomic, strong) IBOutlet UIWebView *web;
 @property(nonatomic, strong) IBOutlet UILabel *loadingLabel;
@@ -30,7 +31,7 @@
         [[self restClient] createFolder:@"siteviewr"];
         [[self restClient] loadMetadata:@"/siteviewr"];
     } else {
-        AHSlideShow *intro = [[AHSlideShow alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) withPages:3 images:@[[UIImage imageNamed:@"1.png"],[UIImage imageNamed:@"2.png"],[UIImage imageNamed:@"3.png"]] blurbs:@[@"Connect with Dropbox", @"Drop your website", @"Test it natively"]];
+        AHSlideShow *intro = [[AHSlideShow alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) withPages:3 images:@[[UIImage imageNamed:@"1.png"],[UIImage imageNamed:@"2.png"],[UIImage imageNamed:@"3.png"]] blurbs:@[@"Connect with Dropbox", @"Drop in your website", @"Test it natively"]];
         
         [self.view addSubview:intro];
         //[[DBSession sharedSession] linkFromController:self];
@@ -163,6 +164,13 @@
 -(void)flipsideViewControllerDidFinish:(AHFlipsideViewController *)controller
 {
     
+}
+
+#pragma mark - SlideShow Delegate
+
+-(void)slideShowDidDismiss
+{
+    [[DBSession sharedSession] linkFromController:self];
 }
 
 @end
