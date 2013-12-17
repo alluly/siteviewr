@@ -24,14 +24,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
     [self createDirectory:@"/website" atFilePath:nil];
     
     if ([[DBSession sharedSession] isLinked]) {
         [[self restClient] createFolder:@"siteviewr"];
         [[self restClient] loadMetadata:@"/siteviewr"];
     } else {
-        AHSlideShow *intro = [[AHSlideShow alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) withPages:3 images:@[[UIImage imageNamed:@"1.png"],[UIImage imageNamed:@"2.png"],[UIImage imageNamed:@"3.png"]] blurbs:@[@"Connect with Dropbox", @"Drop in your website", @"Test it natively"]];
+        AHSlideShow *intro = [[AHSlideShow alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) withPages:3 images:@[[UIImage imageNamed:@"slide1.png"],[UIImage imageNamed:@"slide2.png"],[UIImage imageNamed:@"slide3.png"]] blurbs:@[@"Connect with Dropbox", @"Drop in your website", @"Test it natively"]];
         intro.delegate = self;
         [self.view addSubview:intro];
         //[[DBSession sharedSession] linkFromController:self];
@@ -45,11 +45,6 @@
     if ([[DBSession sharedSession] isLinked]) {
         [[self restClient] createFolder:@"siteviewr"];
         [[self restClient] loadMetadata:@"/siteviewr"];
-    } else {
-        AHSlideShow *intro = [[AHSlideShow alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) withPages:3 images:@[[UIImage imageNamed:@"1.png"],[UIImage imageNamed:@"2.png"],[UIImage imageNamed:@"3.png"]] blurbs:@[@"Connect with Dropbox", @"Drop in your website", @"Test it natively"]];
-        intro.delegate = self;
-        [self.view addSubview:intro];
-        //[[DBSession sharedSession] linkFromController:self];
     }
 }
 -(IBAction)refresh:(id)sender
@@ -135,6 +130,7 @@
         }];
         [_web reload];
         _loadingLabel.text = [_web stringByEvaluatingJavaScriptFromString:@"document.title"];
+        self.refresh.hidden = NO;
     }
     NSLog(@"Loaded file at path %@",localPath);
 }

@@ -31,6 +31,8 @@
             blurb.tag = i;
             
             UIImageView *background = [[UIImageView alloc] initWithFrame:CGRectMake(frame.size.width*i, 0, frame.size.width, frame.size.height)];
+            background.contentMode = UIViewContentModeTop;
+            background.backgroundColor = [UIColor blackColor];
             background.image = [imageArray objectAtIndex:i];
             background.tag = i;
             [_scroll addSubview:background];
@@ -40,8 +42,10 @@
         
         _dismiss = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         _dismiss.hidden = YES;
-        _dismiss.frame = CGRectMake(100, 300, 120, 30);
+        _dismiss.frame = CGRectMake(100, 420, 120, 30);
         [_dismiss setTitle:@"Dismiss" forState:UIControlStateNormal];
+        [_dismiss.titleLabel setFont:[UIFont fontWithName:@"AvenirNext-Demibold" size:18]];
+        [_dismiss setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_dismiss addTarget:self action:@selector(dismiss:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:_scroll];
         [self addSubview:_dismiss];
